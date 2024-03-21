@@ -21,17 +21,30 @@ Documented on 03/21/24 by Keming He as the DevOps consultant for this project. C
 ## Quick Start
 
 > [!NOTE]
+> 
 > For demonstration purposes, TODO: add illustration of backend routing and database design diagrams here.
+
+> [!IMPORTANT]
+>
+> For common troubleshooting, as well as issue submission, please go to our issue board:
+>
+> https://github.com/devosu/research-mentorship-backend/issues
 
 ## For Developers
 
 ### 0. Git, Java, and Maven Set Up
 
-Install the latest version of git version control on your local dev environment. Official link: https://git-scm.com/downloads
+Install the latest version of git version control on your local dev environment. 
 
-Install **Bellsoft's Java 17 LTS**, specifically this time. Official link: https://bell-sw.com/pages/downloads/#jdk-17-lts
+> Official link: https://git-scm.com/downloads
 
-Install the latest version of Maven on your local dev environment. Official link: https://maven.apache.org/users/index.html
+Install **Bellsoft's Java 17 LTS**, we need an exact match this time. 
+
+> Official link: https://bell-sw.com/pages/downloads/#jdk-17-lts
+
+Install the latest version of Maven on your local dev environment. 
+
+> Official link: https://maven.apache.org/users/index.html
 
 Run these commands in a terminal/cmd/powershell to confirm installation success:
 
@@ -51,7 +64,6 @@ Java version: 17.0.10, vendor: BellSoft,... # For Java (must be 17)
 ```
 
 ### 1. Clone the Repository 
-
 
 Open any termial and run:
 
@@ -82,6 +94,6 @@ set -e; mvn clean; mvn package; java -jar target/YOUR_PACKEGED_JAR.jar
 
 ### 2. Let's Build
 
-@williamsd39 The floor is yours.
+D'Andre, the floor is yours.
 
 Happy Developing Everyone!
