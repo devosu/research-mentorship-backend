@@ -20,6 +20,41 @@ Documented on 03/21/24 by Keming He as the DevOps consultant for this project. C
 
 ## Quick Start
 
+:tada: As of 03/25/24, the backend is **fully Docker-containerized** by Keming as part 1 of the CI/CD project pipline.
+
+Part two consists of automatic testing and build per commit to main, which is coming soon through GitHub Actions.
+
+To build the backend yourself, you need to have Docker installed and fully setup with all the necessary permissions, the detailed guide for every OS can be found here:
+
+> Official link: https://docs.docker.com/get-docker/
+
+After your successful setup, run these commands to pull (the build base), build, and run your image locally:
+
+```bash
+# Only need to run once, to fetch base images.
+docker pull bellsoft/liberica-runtime-container
+```
+```bash
+# Build the container image and store it locally.
+# Feel free to create your own image name and tags.
+docker build -t image-name:image-tag .
+```
+
+```bash
+# Run your container and see output in browser.
+# SpringBoot port convention is 8080,
+# so don't forget to go to
+# http://localhost:8080
+docker run -p 8080:8080 image-name:image-tag
+```
+
+```bash
+# And finally, stop and kill all the running containers.
+set -e;
+docker stop $(docker ps -q);
+docker rm $(docker ps -a -q);
+```
+
 > [!NOTE]
 > 
 > For demonstration purposes, TODO: add illustration of backend routing and database design diagrams here.
