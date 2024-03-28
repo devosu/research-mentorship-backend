@@ -13,7 +13,7 @@ import org.bson.Document;
 @Configuration
 public class MongoDbConfig {
 
-    //used environmental variable to store connection string
+    //environment variable being used to store connection string
      @Value("${MONGODB_CONNECTION_STRING}")
     private String mongoConnectionString;
 

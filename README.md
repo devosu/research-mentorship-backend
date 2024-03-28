@@ -96,4 +96,40 @@ set -e; mvn clean; mvn package; java -jar target/YOUR_PACKEGED_JAR.jar
 
 D'Andre, the floor is yours.
 
+## Setting up MongoDB Connection 
+
+Documented on 03/27/24 by D'Andre Williams as the Sr. Software Engineer for this project. Connect with me at https://www.linkedin.com/in/d%E2%80%99andre-williams-0138501a5/ :star:
+
+
+In MongoDB, in the database tab next to ResearchMentorship project name you will see a button that says "connect". Once you press "connect" go the option that says "MongoDB for VS Code". Under the "Connect to your MongoDB deployment" section copy the link of your personal connection string. Note that you will need to insert your password into this string. 
+
+Now, we will use the string to create an environment variable on your personal device. 
+
+Windows devices: 
+In the terminal of your IDE type the following command: 
+set MONGODB_URI=mongodb+srv://<username>:<password>@<host>/<database>
+replacing the URI with your personal connection string. 
+
+To verify the environment variable type the following command:
+echo %MONGODB_URI%
+
+
+Linux/macOS:
+In the terminal of your IDE type the following command:
+export MONGODB_URI="mongodb+srv://<username>:<password>@<host>/<database>"
+replacing the URI with your personal connection string. 
+
+To verify the environment variable type the following command:
+echo $MONGODB_URI
+
+Now that your connection string is stored as an environment variable, you will be able to access the database without changing any configuration code in the backend, and you're credentials will be secure and unaccesible from the repository. 
+
+
+
+
+
+
+
+
+
 Happy Developing Everyone!
