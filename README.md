@@ -107,20 +107,20 @@ Now, we will use the string to create an environment variable on your personal d
 
 Windows devices: 
 In the terminal of your IDE type the following command: 
-set MONGODB_URI=mongodb+srv://<username>:<password>@<host>/<database>
+set MONGODB_CONNECTION_STRING=mongodb+srv://<username>:<password>@<host>/<database>
 replacing the URI with your personal connection string. 
 
 To verify the environment variable type the following command:
-echo %MONGODB_URI%
+echo %MONGODB_CONNECTION_STRING%
 
 
 Linux/macOS:
 In the terminal of your IDE type the following command:
-export MONGODB_URI="mongodb+srv://<username>:<password>@<host>/<database>"
+export MONGODB_CONNECTION_STRING="mongodb+srv://<username>:<password>@<host>/<database>"
 replacing the URI with your personal connection string. 
 
 To verify the environment variable type the following command:
-echo $MONGODB_URI
+echo $MONGODB_CONNECTION_STRING
 
 Now that your connection string is stored as an environment variable, you will be able to access the database without changing any configuration code in the backend, and you're credentials will be secure and unaccesible from the repository. 
 
