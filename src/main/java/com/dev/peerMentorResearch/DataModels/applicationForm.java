@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document (collection = "interestForms")
-public class applicationForm {
+public class ApplicationForm {
     
     @Id
     private String name;
