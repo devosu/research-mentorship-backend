@@ -23,11 +23,11 @@ public class MongoDbConfig {
     }
     @Bean
     public MongoDatabase mongoDatabase() {
-        return mongoClient().getDatabase("researchMentorshipData");
+        return mongoClient().getDatabase("applicationData");
     }
     
     @Bean
-    public MongoCollection<Document> mentorFormCollection() {
+    public MongoCollection<Document> applicationFormCollection() {
         MongoDatabase database = mongoDatabase();
         return database.getCollection("applicationForms");
     }

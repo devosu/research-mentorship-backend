@@ -3,7 +3,7 @@ package com.dev.peerMentorResearch.DataModels;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document (collection = "interestForms")
+@Document (collection = "applicationForms")
 public class ApplicationForm {
     
     @Id
@@ -13,7 +13,10 @@ public class ApplicationForm {
     private String desiredResearchField;
     private String currentResearchField;
     private String descriptionOfCurrentResearch;
+    private String type;
 
+
+    //the type will distinguish between a mentor or mentee
 
 
     //Getters
@@ -28,7 +31,7 @@ public class ApplicationForm {
     public String getMajor() {
         return major;
     }
-    public String getDesiredtResearchField() {
+    public String getDesiredResearchField() {
         return desiredResearchField;
     }
     public String getCurrentResearchField() {
@@ -36,6 +39,9 @@ public class ApplicationForm {
     }
     public String getDescriptionOfCurrentResearch() {
         return descriptionOfCurrentResearch;
+    }
+    public String getType() {
+        return type;
     }
  
     /**
@@ -64,6 +70,9 @@ public class ApplicationForm {
     
     public void setDescriptionOfCurrentResearch(String descriptionOfCurrentResearch) {
         this.descriptionOfCurrentResearch = descriptionOfCurrentResearch;
+    }
+    public void setType(String type) {
+        this.type = type; 
     }
     
   

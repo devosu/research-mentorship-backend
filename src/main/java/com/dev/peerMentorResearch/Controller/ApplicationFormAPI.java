@@ -20,12 +20,20 @@ public class ApplicationFormAPI {
     private ApplicationFormRepository applicationFormRepository;
 
 
-    @SuppressWarnings("null")
-    @PostMapping("/formSubmission")
     
-    public ResponseEntity<String> submitForm(@RequestBody ApplicationForm applicant) {
-        applicationFormRepository.save(applicant);
-        return ResponseEntity.ok("Application submitted successfully");
+    @PostMapping("/menteeFormSubmission") 
+    public ResponseEntity<String> menteeSubmissionForm(@RequestBody ApplicationForm mentee) {
+        mentee.setType("mentee");
+        applicationFormRepository.save(mentee);
+        return ResponseEntity.ok("Mentee application submitted successfully");
+    }
+
+    
+    @PostMapping("/mentorFormSubmission") 
+    public ResponseEntity<String> mentorSubmissionForm(@RequestBody ApplicationForm mentor) {
+        mentor.setType("mentor");
+        applicationFormRepository.save(mentor);
+        return ResponseEntity.ok("Mentor application submitted successfully");
     }
 }
 
