@@ -23,7 +23,7 @@ public class MongoDbConfig {
     }
     @Bean
     public MongoDatabase mongoDatabase() {
-        return mongoClient().getDatabase("applicationData");
+        return mongoClient().getDatabase("data");
     }
     
     @Bean
