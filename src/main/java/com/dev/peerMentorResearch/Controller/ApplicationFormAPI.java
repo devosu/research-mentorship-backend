@@ -36,5 +36,3 @@ public class ApplicationFormAPI {
         return ResponseEntity.ok("Mentor application submitted successfully");
     }
 }
-
-

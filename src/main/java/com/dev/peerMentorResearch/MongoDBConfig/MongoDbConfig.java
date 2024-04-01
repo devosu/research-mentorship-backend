@@ -13,6 +13,9 @@ import org.bson.Document;
 @Configuration
 public class MongoDbConfig {
 
+
+
+    
     //environment variable being used to store connection string
      @Value("${MONGODB_CONNECTION_STRING}")
     private String mongoConnectionString;
@@ -27,7 +30,7 @@ public class MongoDbConfig {
     }
     
     @Bean
-    public MongoCollection<Document> applicationFormCollection() {
+    public MongoCollection<Document> mongoCollection() {
         MongoDatabase database = mongoDatabase();
         return database.getCollection("applicationForms");
     }
